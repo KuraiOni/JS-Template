@@ -25,6 +25,7 @@ body {
 nav .container {
   background-color: rgb(255, 255, 255);
   width: 62px;
+  height: 613px;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -34,8 +35,19 @@ nav .icons-cont {
   margin: 80px 0 130px;
 }
 nav .icons {
-  margin: 20px 0;
+  margin: 13px 0;
   background-color: white;
+  cursor: pointer;
+}
+nav .point {
+  cursor: pointer;
+}
+nav .active {
+  color: white;
+  background-color: black;
+  padding: 7px;
+  border-radius: 10px;
+  margin: 0 0 0 -6px;
 }
 /* End Nav  */
 /* Start Header */
@@ -52,6 +64,9 @@ header .bcgrnd {
 header .bar {
   padding: 10px;
   border-radius: 10px;
+}
+header .bar .fa-reorder {
+  cursor: pointer;
 }
 header .search {
   padding: 10px 10px 10px 20px;
@@ -116,3 +131,179 @@ header .pp p {
   padding-right: 7px;
 }
 /* End Header */
+/* Start Next-Match */
+.next-match {
+  background-image: url(../images/shutterstock_1302982387.jpg);
+  background-size: cover;
+  width: 500px;
+  height: 300px;
+  position: relative;
+  left: 120px;
+  top: -500px;
+  border-radius: 2em;
+  color: white;
+}
+.next-match::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0030ff3b;
+  border-radius: 2em;
+}
+.next-match::after {
+  position: absolute;
+  content: "Next Match";
+  left: 0;
+  top: -40px;
+  height: 200px;
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: black;
+  border-radius: 20px;
+  z-index: -1;
+}
+.next-match .league {
+  position: absolute;
+  left: 20px;
+  top: 25px;
+}
+.next-match .champ-ship {
+  position: absolute;
+  right: 20px;
+  top: 25px;
+}
+.next-match .date {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-60%);
+  top: 70px;
+}
+.next-match .time {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-60%);
+  top: 90px;
+  font-size: 0.7em;
+}
+.next-match .match-details {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 130px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.next-match .match-details .first-team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: -8px;
+  margin-right: 20px;
+}
+.next-match .match-details .first-team img {
+  width: 80px;
+  height: 80px;
+}
+.next-match .match-details .second-team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.next-match .match-details .second-team img {
+  width: 80px;
+  height: 80px;
+}
+.next-match .stadium {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-60%);
+  bottom: 50px;
+}
+/* End Next-Match */
+/* Start Calender */
+.calendar {
+  position: relative;
+  left: 50%;
+  top: -800px;
+  width: 320px;
+  min-height: 300px;
+  border-radius: 30px;
+  padding: 20px;
+  background-color: white;
+}
+.calendar .calc-date {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-items: center;
+  margin-bottom: 5px;
+  width: 100%;
+}
+.calendar .calc-date h3 {
+  width: fit-content;
+}
+.calendar .calc-date .less {
+  margin-left: 150px;
+  margin-right: 10px;
+  font-weight: 1000;
+  background-color: white;
+  padding: 2.5px 7px;
+  border-radius: 4px;
+  cursor: pointer;
+  -moz-box-shadow: 0 0 0px 1px black;
+  -o-box-shadow: 0 0 60px 1px black;
+  box-shadow: 0 0 100px 1px black;
+}
+.calendar .calc-date .greater {
+  font-weight: 1000;
+  background-color: white;
+  padding: 2.5px 7px;
+  border-radius: 4px;
+  cursor: pointer;
+  -moz-box-shadow: 0 0 60px 1px black;
+  -o-box-shadow: 0 0 60px 1px black;
+  box-shadow: 0 0 100px 1px black;
+}
+.calendar .days {
+  display: flex;
+  flex-wrap: wrap;
+}
+.calendar .days p {
+  padding: 8px;
+  font-size: 13px;
+  color: gray;
+}
+.calendar .numbers {
+  display: flex;
+  flex-wrap: wrap;
+}
+.calendar .numbers div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  padding: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.calendar .numbers div:not(.today):hover {
+  background-color: #777;
+  border: 1px solid #333;
+  border-radius: 10px;
+  color: white;
+}
+.calendar .numbers .prev-date,
+.next-date {
+  color: #777;
+}
+.calendar .numbers .today {
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+}
+/* End Calender */
